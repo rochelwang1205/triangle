@@ -23,21 +23,25 @@
 - Live Site URL: [pages](https://rochelwang1205.github.io/triangle/)
 
 ## My process
-
+- navbar > navbrand + navbar-nav > nav-item
+- Q：bootstrap5導覽有專屬類別，那使用列表何不使用列表有甚麼差異?要怎麼選擇使用?
 ### Built with
 
 - git, Node.js
 - Vite
+- Bootstrap5
 - SASS/SCSS
 - ejs
   
 ### The following goals
+- 🌟2024/09/15 navbar & variables setting & favicon(2.5hrs)
 - 🎈2024/08/29 setup environment!
 
 
 ### Useful resources
 好用的資源：
-- 1. 
+- 1. [Bootstrap5 - 導覽列(navbar)](https://bootstrap5.hexschool.com/docs/5.1/components/navbar/)
+- 2. [favicon.ico-網站logo的製作與使用](https://ithelp.ithome.com.tw/articles/10285383)
 
 ## Author
 - Website - [Rochel Wang](https://github.com/rochelwang1205)

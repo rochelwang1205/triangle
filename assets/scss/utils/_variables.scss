@@ -306,6 +306,17 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+$gray-01:          #F9F9F9 !default;
+$gray-02:          #E9E9E9 !default;
+$gray-03:          #B9B9B9 !default;
+$gray-04:          #5B5B5B !default;
+$gray-05:          #292929 !default;
+$gray-06:          #1F1F1F !default;
+$gray-07:          #151515 !default;
+$gray-08:          #0D0D0D !default;
+$gray-09:          #070707 !default;
+$brand-01:         #D6FF3F !default;
+
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -317,7 +328,18 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "gray-01":    $gray-01,
+  "gray-02":    $gray-02,
+  "gray-03":    $gray-03,
+  "gray-04":    $gray-04,
+  "gray-05":    $gray-05,
+  "gray-06":    $gray-06,
+  "gray-07":    $gray-07,
+  "gray-08":    $gray-08,
+  "gray-09":    $gray-09,
+  "brand-01":   $brand-01
+
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -376,9 +398,10 @@ $spacers: (
   0: 0,
   1: $spacer * .25,
   2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  3: $spacer * .75,
+  4: $spacer,
+  5: $spacer * 1.5,
+  6: $spacer * 3,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -398,7 +421,7 @@ $position-values: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white !default;
+$body-bg:                   $gray-09 !default;
 $body-color:                $gray-900 !default;
 $body-text-align:           null !default;
 
@@ -406,8 +429,10 @@ $body-text-align:           null !default;
 //
 // Style anchor elements.
 
-$link-color:                              $primary !default;
-$link-decoration:                         underline !default;
+// $link-color:                              $primary !default;
+$link-color:                              $gray-03 !default;
+// $link-decoration:                         underline !default;
+$link-decoration:                         none !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
@@ -508,7 +533,8 @@ $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
 // scss-docs-end box-shadow-variables
 
 $component-active-color:      $white !default;
-$component-active-bg:         $primary !default;
+// $component-active-bg:         $primary !default;
+$component-active-bg:         $brand-01 !default;
 
 // scss-docs-start caret-variables
 $caret-width:                 .3em !default;
@@ -542,8 +568,10 @@ $aspect-ratios: (
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-noto-sans:       "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 // stylelint-enable value-keyword-case
-$font-family-base:            var(--#{$prefix}font-sans-serif) !default;
+// $font-family-code:            var(--#{$prefix}font-sans-serif) !default;
+$font-family-base:            $font-family-noto-sans !default;
 $font-family-code:            var(--#{$prefix}font-monospace) !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
@@ -1098,26 +1126,36 @@ $navbar-toggler-padding-y:          .25rem !default;
 $navbar-toggler-padding-x:          .75rem !default;
 $navbar-toggler-font-size:          $font-size-lg !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
-$navbar-toggler-focus-width:        $btn-focus-width !default;
+$navbar-toggler-focus-width:        0 !default;
 $navbar-toggler-transition:         box-shadow .15s ease-in-out !default;
 
-$navbar-light-color:                rgba($black, .55) !default;
-$navbar-light-hover-color:          rgba($black, .7) !default;
-$navbar-light-active-color:         rgba($black, .9) !default;
-$navbar-light-disabled-color:       rgba($black, .3) !default;
+// $navbar-light-color:                rgba($black, .55) !default;
+// $navbar-light-hover-color:          rgba($black, .7) !default;
+// $navbar-light-active-color:         rgba($black, .9) !default;
+// $navbar-light-disabled-color:       rgba($black, .3) !default;
+$navbar-light-color:                rgba($white, .55) !default;
+$navbar-light-hover-color:          rgba($white, .7) !default;
+$navbar-light-active-color:         rgba($white, .9) !default;
+$navbar-light-disabled-color:       rgba($white, .3) !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-light-toggler-border-color: rgba($black, .1) !default;
+// $navbar-light-toggler-border-color: rgba($black, .1) !default;
+$navbar-light-toggler-border-color: rgba($white, 0) !default;
 $navbar-light-brand-color:          $navbar-light-active-color !default;
 $navbar-light-brand-hover-color:    $navbar-light-active-color !default;
 // scss-docs-end navbar-variables
 
 // scss-docs-start navbar-dark-variables
-$navbar-dark-color:                 rgba($white, .55) !default;
-$navbar-dark-hover-color:           rgba($white, .75) !default;
+// $navbar-dark-color:                 rgba($white, .55) !default;
+// $navbar-dark-hover-color:           rgba($white, .75) !default;
+// $navbar-dark-active-color:          $white !default;
+// $navbar-dark-disabled-color:        rgba($white, .25) !default;
+$navbar-dark-color:                 rgba($dark, .55) !default;
+$navbar-dark-hover-color:           rgba($dark, .75) !default;
 $navbar-dark-active-color:          $white !default;
-$navbar-dark-disabled-color:        rgba($white, .25) !default;
+$navbar-dark-disabled-color:        rgba($dark, .25) !default;
 $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-dark-toggler-border-color:  rgba($white, .1) !default;
+// $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
+$navbar-dark-toggler-border-color:  rgba($dark, 0) !default;
 $navbar-dark-brand-color:           $navbar-dark-active-color !default;
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 // scss-docs-end navbar-dark-variables
@@ -1272,7 +1310,8 @@ $accordion-button-color:                  $accordion-color !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              tint-color($component-active-bg, 90%) !default;
-$accordion-button-active-color:           shade-color($primary, 10%) !default;
+// $accordion-button-active-color:           shade-color($primary, 10%) !default;
+$accordion-button-active-color:           shade-color($brand-01, 10%) !default;
 
 $accordion-button-focus-border-color:     $input-focus-border-color !default;
 $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
@@ -1457,7 +1496,8 @@ $progress-bg:                       $gray-200 !default;
 $progress-border-radius:            $border-radius !default;
 $progress-box-shadow:               $box-shadow-inset !default;
 $progress-bar-color:                $white !default;
-$progress-bar-bg:                   $primary !default;
+// $progress-bar-bg:                   $primary !default;
+$progress-bar-bg:                   $brand-01 !default;
 $progress-bar-animation-timing:     1s linear infinite !default;
 $progress-bar-transition:           width .6s ease !default;
 // scss-docs-end progress-variables
