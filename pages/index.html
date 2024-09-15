@@ -1,55 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%- include('./layout/head'); -%>
     <title>Triangle English | 線上英文學習平台</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
-
-    <h1 class="index-title">我是首頁</h1>
-
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/cat.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
-      </div>
-    </div>
-
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <main>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section class="cards container">
+        <div class="d-flex justify-content-between"><h1 class="text-gray-01">生活英文</h1><a href="goods.html"><span class="material-icons-outlined forward">
+          chevron_right
+          </span></a></div>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="../assets/images/goods- (1).png" class="card-img-top" alt="course-name">
+                <div class="card-body">
+                  <h3 class="card-title text-gray-01">Card title</h3>
+                  <div class="tags text-gray-03"><span></span><span></span></div>
+                  <p class="card-text text-gray-03">李欣喜 線上英語導師</p>
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center text-gray-03 fs-3">
+                      <span class="material-icons text-brand-01">
+                      kid_star
+                      </span><span class="text-gray-03">4.8(1579)</span>
+                    </div>
+                      <span class="fs-3 text-gray-01">NT$1,690</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
-          </div>
+        <div class="text-center"><button type="button" data-bs-toggle="button" class="btn btn-outline-brand-01 fs-3 mx-0">查看更多課程</button></div>
+      </section>
+      <section class="recommend"></section>
+      <section class="call-to-action text-center">
+        <div class="container">
+          <p class="fs-2 text-gray-01">現在加入 Triangle 學習!</p>
+          <button type="button" data-bs-toggle="button" class="btn btn-brand-01 fs-3">立即註冊</button>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
+
+
 
     <%- include('./layout/footer'); -%>
 

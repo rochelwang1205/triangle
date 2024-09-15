@@ -34,6 +34,7 @@
 - ejs
   
 ### The following goals
+- 🌟2024/09/15 footer + index.html on the way (2.5hr)
 - 🌟2024/09/15 navbar & variables setting & favicon(2.5hrs)
 - 🎈2024/08/29 setup environment!
 
@@ -42,6 +43,7 @@
 好用的資源：
 - 1. [Bootstrap5 - 導覽列(navbar)](https://bootstrap5.hexschool.com/docs/5.1/components/navbar/)
 - 2. [favicon.ico-網站logo的製作與使用](https://ithelp.ithome.com.tw/articles/10285383)
+- 3. [Iconduck](https://iconduck.com/)
 
 ## Author
 - Website - [Rochel Wang](https://github.com/rochelwang1205)

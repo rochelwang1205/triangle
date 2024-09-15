@@ -1,3 +1,18 @@
-.index-title {
-  font-size: 100px;
+.cards{
+  padding: 120px 0;
+  .forward{
+    font-size: 72px;
+  }
+  .card-text{
+    padding-bottom: 60px;
+  }
+}
+.call-to-action{
+  background-image: url('../assets/images/call-to-action.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 240px 0; 
+  background-color: rgba(0, 0, 0, .6);
+  background-blend-mode: multiply;
 }
