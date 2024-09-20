@@ -402,6 +402,9 @@ $spacers: (
   4: $spacer,
   5: $spacer * 1.5,
   6: $spacer * 3,
+  7: $spacer * 3.75,
+  8: $spacer * 4,
+  9: $spacer * 5,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -1286,7 +1289,8 @@ $card-cap-padding-y:                $card-spacer-y * .5 !default;
 $card-cap-padding-x:                $card-spacer-x !default;
 $card-cap-bg:                       rgba($black, .03) !default;
 $card-cap-color:                    null !default;
-$card-height:                       null !default;
+// $card-height:                       null !default;
+$card-height:                       100% !default;
 $card-color:                        null !default;
 // $card-bg:                           $white !default;
 $card-bg:                           $gray-06 !default;

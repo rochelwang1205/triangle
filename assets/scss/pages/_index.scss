@@ -6,9 +6,65 @@
   .card-text{
     padding-bottom: 60px;
   }
-}
+  .card{
+    background-color: $gray-08;
+    border: 1px solid $gray-06;
+    &:hover{
+      box-shadow: $brand-01 0px 6px 24px 0px, $brand-01 0px 0px 0px 1px;
+      border: none;
+      transition: 0.3s ease;
+    }
+    .img-tags{
+        top: 0;
+        left: 0;
+        padding: 1rem;
+        .hot-tag{
+          background-color: $brand-01;
+          color: $gray-08;
+          padding: 4px 8px;
+          border-radius: 4px;
+        }
+      }
+    }
+    .card-body{
+      padding: 2rem;
+    }
+    .card-title{
+      margin-bottom: 16px;
+    }
+    .tags{
+      margin-bottom: 16px;
+      span{
+        background-color: $gray-06;
+        margin-right: 8px;
+        border-radius: 4px;
+        padding: 4px 8px;
+      }
+    }
+  }
+  .recommend{
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      font-size: 18px;
+      background: transparent;
+      border: 1px solid $gray-07;
+      border-radius: 20px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      object-fit: cover;
+    }
+  }
 .call-to-action{
-  background-image: url('../assets/images/call-to-action.png');
+  background-image: url(https://github.com/rochelwang1205/triangle/blob/main/assets/images/call-to-action.png?raw=true);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
