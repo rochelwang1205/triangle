@@ -34,6 +34,7 @@
 - ejs
   
 ### The following goals
+- 🌟2024/09/20 index.html component (banner, intro & feature) (2.5hr)
 - 🌟2024/09/20 index.html component (card & swiper) (2.5hr)
 - 🌟2024/09/15 footer + index.html on the way (2.5hr)
 - 🌟2024/09/15 navbar & variables setting & favicon(2.5hrs)
