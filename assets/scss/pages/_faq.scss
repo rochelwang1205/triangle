@@ -1,0 +1,15 @@
+.accordion-item{
+    margin-bottom: 2rem;
+}
+#accordionFlushExample {
+    font-style: 32px;
+    line-height: 1.5em;
+    .accordion-button{
+        border-radius: 2.5rem;
+        padding: 2rem 3rem;
+        &:hover{
+            background-color: $brand-01;
+            color: $gray-06;
+        }
+    }
+}

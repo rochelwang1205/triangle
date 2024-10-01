@@ -1,7 +1,32 @@
 import './assets/scss/all.scss';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+// navbar
+document.addEventListener('DOMContentLoaded', function() {
+  console.log("DOM fully loaded");
 
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  const currentPath = window.location.pathname;
+
+  console.log("Current path:", currentPath);
+
+  navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      console.log("Checking link:", href);
+      
+      // 移除所有鏈接的 active 類
+      link.classList.remove('active');
+      link.removeAttribute('aria-current');
+
+      // 檢查當前路徑是否以鏈接的 href 結尾
+      if (currentPath.endsWith(href) || 
+          (currentPath.endsWith('/') && href === 'index.html')) {
+          console.log("Setting active:", href);
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+      }
+  });
+});
 // 首頁-banner
 var bannerSwiper = new Swiper(".banner-swiper", {
   freeMode: true,

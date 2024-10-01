@@ -34,6 +34,7 @@
 - ejs
   
 ### The following goals
+- 🪄2024/09/29 faq.html + revised navbar-active-style(1.5hrs)
 - 🔅2024/09/29 index.html (hot-course) (1hr)
 - 🌟2024/09/20 index.html component (banner, intro & feature) (2.5hr)
 - 🌟2024/09/20 index.html component (card & swiper) (2.5hr)
@@ -47,6 +48,7 @@
 - 1. [Bootstrap5 - 導覽列(navbar)](https://bootstrap5.hexschool.com/docs/5.1/components/navbar/)
 - 2. [favicon.ico-網站logo的製作與使用](https://ithelp.ithome.com.tw/articles/10285383)
 - 3. [Iconduck](https://iconduck.com/)
+- 4. [Bootstrap Icons](https://icons.getbootstrap.com/)
 
 ## Author
 - Website - [Rochel Wang](https://github.com/rochelwang1205)
