@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <%- include('./layout/head'); -%>
+    <title>Triangle English | 線上英文學習平台</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    <main>
+      <%- include('./components/recommend_tool'); -%>
+      <div id="goodsSections" class="container"></div>
+    </main>
+    <%- include('./layout/footer'); -%>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="../goods.js"></script>
+  </body>
+</html>

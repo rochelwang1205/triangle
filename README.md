@@ -34,6 +34,7 @@
 - ejs
   
 ### The following goals
+- 🧩2024/10/04 components(recommend_tool) + index.html details(contents, truncate) + goods.html on the way (2.5hrs)
 - 🪄2024/09/29 faq.html + revised navbar-active-style(1.5hrs)
 - 🔅2024/09/29 index.html (hot-course) (1hr)
 - 🌟2024/09/20 index.html component (banner, intro & feature) (2.5hr)
