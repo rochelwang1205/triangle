@@ -1,0 +1,31 @@
+.custom-search .form-control {
+    border-radius: 20px 0 0 20px;
+    border-right: none;
+    color: $gray-01;
+}
+.custom-search .input-group-text {
+    background-color: transparent;
+    border: 1px solid #ced4da;
+    border-left: none;
+    border-radius: 0;
+}
+.custom-search .btn {
+    border-radius: 0 20px 20px 0;
+    &:focus{
+        box-shadow: none;
+    }
+}
+.input-group-text {
+    background-color: transparent;
+    border: 1px solid #ced4da;
+    background: transparent;
+    border: none;
+    color: #ced4da;
+}
+.sort-icon {
+    cursor: pointer;
+    color: #6c757d;
+}
+.sort-icon:hover {
+    color: #495057;
+}

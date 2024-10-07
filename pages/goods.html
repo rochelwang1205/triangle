@@ -8,7 +8,33 @@
     <%- include('./layout/header'); -%>
     <main>
       <%- include('./components/recommend_tool'); -%>
-      <div id="goodsSections" class="container"></div>
+      <div id="goodsSections" class="container mt-10">
+        <form class="d-flex mb-7">
+          <div class="input-group custom-search">
+              <input type="search" class="form-control fs-5" placeholder="搜尋課程、演講、說明會" aria-label="Search">
+              <span class="input-group-text">
+                  <span class="material-icons-outlined sort-icon">
+                      sort
+                  </span>
+              </span>
+              <button class="btn btn-brand-01 fs-5" type="submit">搜尋</button>
+          </div>
+      </form>
+        <div class="container">
+          <div class="search-filter row">
+              <div class="col-6 col-lg-3 mb-2"><a href="#" class="btn btn-outline-brand-01 w-100 fs-5">影音課</a></div>
+              <div class="col-6 col-lg-3 mb-2"><a href="#" class="btn btn-outline-brand-01 w-100 fs-5">直播課</a></div>
+              <div class="col-6 col-lg-3 mb-2"><a href="#" class="btn btn-outline-brand-01 w-100 fs-5">演講</a></div>
+              <div class="col-6 col-lg-3 mb-2"><a href="#" class="btn btn-outline-brand-01 w-100 fs-5">說明會</a></div>
+              <div class="col-6 col-lg-3 mb-2"><a href="#" class="btn btn-outline-brand-01 w-100 fs-5">生活英文</a></div>
+              <div class="col-6 col-lg-3 mb-2"><a href="#" class="btn btn-outline-brand-01 w-100 fs-5">旅遊英文</a></div>
+              <div class="col-6 col-lg-3 mb-2"><a href="#" class="btn btn-outline-brand-01 w-100 fs-5">商務英文</a></div>
+              <div class="col-6 col-lg-3 mb-2"><a href="#" class="btn btn-outline-brand-01 w-100 fs-5">學術英文</a></div>
+              <div class="col-6 col-lg-3 mb-2"><a href="#" class="btn btn-outline-brand-01 w-100 fs-5">檢定英文</a></div>
+              <div class="col-6 col-lg-3 mb-2"><a href="#" class="btn btn-outline-brand-01 w-100 fs-5">時事英文</a></div>
+              <div class="col-6 col-lg-3 mb-2"><a href="#" class="btn btn-outline-brand-01 w-100 fs-5">其他主題</a></div>
+          </div>
+      </div>
     </main>
     <%- include('./layout/footer'); -%>
 
