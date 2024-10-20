@@ -27,19 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
-首頁-banner-swiper
-var bannerSwiper = new Swiper(".banner-swiper", {
-  freeMode: true,
-  loop: true,
-  autoplay: {
-    delay: 2500,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-首頁-banner-slidesBg
+// 首頁-banner-slidesBg
 const bannerSlides = [
     {
         url: 'https://github.com/rochelwang1205/triangle/blob/main/assets/images/banner_1.jpg?raw=true',
@@ -67,10 +55,14 @@ const bannerSlides = [
         subtitle: '加入我們的英語學習社群，迎接全新挑戰，開啟語言學習新篇章。'
     },
 ];
+
 document.addEventListener('DOMContentLoaded', function() {
     const swiperWrapper = document.querySelector('.banner-swiper .swiper-wrapper');
     if (swiperWrapper) {
-        bannerSlides.forEach(slide => {
+        // 清空现有的幻灯片
+        swiperWrapper.innerHTML = '';
+
+        bannerSlides.forEach((slide, index) => {
             const slideDiv = document.createElement('div');
             slideDiv.className = 'swiper-slide';
             slideDiv.style.backgroundImage = `url(${slide.url})`;
@@ -83,10 +75,51 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             swiperWrapper.appendChild(slideDiv);
         });
+
+        // 确保所有图片加载完毕后再初始化 Swiper
+        Promise.all(Array.from(document.querySelectorAll('.banner-swiper .swiper-slide'))
+            .map(slide => {
+                return new Promise((resolve) => {
+                    const img = new Image();
+                    img.onload = img.onerror = resolve;
+                    img.src = slide.style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2');
+                });
+            }))
+            .then(() => {
+                // 所有图片加载完毕，初始化 Swiper
+                var bannerSwiper = new Swiper(".banner-swiper", {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    centeredSlides: false,
+                    loop: true,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                        dynamicBullets: false,
+                    },
+                    on: {
+                        init: function () {
+                            console.log('Swiper initialized');
+                            console.log(`Swiper slides count: ${this.slides.length}`);
+                            // 手动设置分页点数量
+                            this.pagination.render();
+                            this.pagination.update();
+                        },
+                    },
+                });
+
+                // 手动更新 Swiper
+                bannerSwiper.update();
+            });
     } else {
         console.error("swiper-wrapper not found");
     }
 });
+
 // 首頁-熱門課程-swiper
 var hotSwiper = new Swiper(".hot-Swiper", {
     slidesPerView: 1,
