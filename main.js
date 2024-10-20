@@ -27,19 +27,19 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
-// 首頁-banner-swiper
-// var bannerSwiper = new Swiper(".banner-swiper", {
-//   freeMode: true,
-//   loop: true,
-//   autoplay: {
-//     delay: 2500,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
-// 首頁-banner-slidesBg
+首頁-banner-swiper
+var bannerSwiper = new Swiper(".banner-swiper", {
+  freeMode: true,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+首頁-banner-slidesBg
 const bannerSlides = [
     {
         url: 'https://github.com/rochelwang1205/triangle/blob/main/assets/images/banner_1.jpg?raw=true',
@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h5>${slide.subtitle}</h5>
                 </div>
             `;
-            
             swiperWrapper.appendChild(slideDiv);
         });
     } else {
@@ -403,3 +402,28 @@ var swiper = new Swiper(".mySwiper", {
         },
       },
   });
+  function createCommentCard(comment) {
+    return `
+        <div class="swiper-slide d-flex flex-column align-items-start justify-content-between p-5">
+                <div class="recommend-context text-gray-01">
+                  <h4>CP值超高</h4>
+                  <div class="fs-6"><span class="material-icons text-brand-01 fs-5">
+                    star
+                    </span><span class="material-icons text-brand-01 fs-5">
+                      star
+                      </span><span class="material-icons text-brand-01 fs-5">
+                        star
+                        </span><span class="material-icons text-brand-01 fs-5">
+                          star
+                          </span><span class="material-icons text-brand-01 fs-5">
+                            star
+                            </span></div>
+                  <p class="fs-6">相比其他平台，這裡的價格非常合理，而且課程質量很高，非常值得!</p>
+                </div>
+                <div class="d-flex gap-4 text-start">
+                  <img src="https://plus.unsplash.com/premium_photo-1670884441012-c5cf195c062a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="profile">
+                  <p class="fs-6 text-gray-03">Ivy Christen</p>
+                </div>
+        </div>
+    `;
+}
